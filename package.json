@@ -19,7 +19,7 @@
   },
   "scripts": {
     "wp-env": "wp-env",
-    "start": "wp-env start && open http://localhost:8888",
+    "start": "wp-env start && open http://localhost:4013",
     "stop": "wp-env stop",
     "destroy": "wp-env destroy",
     "update": "wp-env start --update",
