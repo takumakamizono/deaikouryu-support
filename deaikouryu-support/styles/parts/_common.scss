@@ -1,10 +1,9 @@
 @use "../globals" as *;
 
 body {
-  //font-family: "Noto Sans JP", sans-serif;
-  font-family: "Noto Serif JP", serif;
+  font-family: "Noto Sans JP", "M PLUS Rounded 1c", sans-serif;
+
   color: $main-txt;
-  // font-family: new-order, sans-serif;
 }
 
 img {
@@ -68,42 +67,24 @@ img {
   }
 }
 
-// font
 .font-sm {
-  font-size: 14px;
-
-  @include mq(lg) {
-    font-size: 16px;
-  }
+  font-size: clamp(13px, 3vw, 16px);
 }
 .font-md {
-  font-size: 17px;
-
-  @include mq(lg) {
-    font-size: 19px;
-  }
+  font-size: clamp(15px, 3vw, 19px);
 }
 .font-lr {
-  font-size: 17px;
-
-  @include mq(lg) {
-    font-size: 23px;
-  }
+  font-size: clamp(16px, 4vw, 23px);
 }
+
 .font-lg {
-  font-size: 25px;
-
-  @include mq(lg) {
-    font-size: 36px;
-  }
+  font-size: clamp(17px, 4vw, 36px);
 }
+
 .font-xl {
-  font-size: 28px;
-
-  @include mq(lg) {
-    font-size: 40px;
-  }
+  font-size: clamp(20px, 5vw, 40px);
 }
+
 .section-titles {
   text-align: center;
   @extend .mb-md;
