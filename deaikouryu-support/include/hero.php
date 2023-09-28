@@ -1,35 +1,11 @@
 <?php if(is_home()): ?>
 <div class="hero">
-            <div class="swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="hero__title">美しい天降川や霧島の山々</div>
-                <?php if(get_field('top_img01',222)): ?>      
-              <img src="<?php the_field('top_img01',222);?>" alt="トップスライド画像01">
-              <?php else: ?>
-                  <img src="<?= get_template_directory_uri(); ?>/images/top-image03.png" alt="トップスライド画像" />
-              <?php endif; ?>
-                </div>
-                <div class="swiper-slide">
-                  <div class="hero__title">そこに住む人々の環境を守りながら</div>
-                  <?php if(get_field('top_img02',222)): ?>      
-              <img src="<?php the_field('top_img02',222);?>" alt="トップスライド画像02">
-              <?php else: ?>
-                  <img src="<?= get_template_directory_uri(); ?>/images/top-image03.png" alt="トップスライド画像" />
-              <?php endif; ?>
-                </div>
-                <div class="swiper-slide" data-swiper-autoplay="6000">
-                  <div class="hero__title">皆さまとともに歩み続けます</div>
-                  <div class="hero__logo">株式会社川原建設</div>
-                  <?php if(get_field('top_img03',222)): ?>      
-              <img src="<?php the_field('top_img03',222);?>" alt="トップスライド画像03">
-              <?php else: ?>
-                  <img src="<?= get_template_directory_uri(); ?>/images/top-image03.png" alt="トップスライド画像" />
-              <?php endif; ?>
-                </div>
-              </div>
-             
-            </div>
+  <div class="hero__inner">
+               <h1 class="hero__title">鹿児島市企業・団体間交流・出会いサポート事業</h1>
+                  <img src="<?= get_template_directory_uri(); ?>/images/hero-catch.png" alt="トップスライド画像" />  
+                  <p class="hero__desc">企業・団体間のつながりで、独身の方の出会いや交流を一緒に応援しませんか？</p>         
+                  <img src="<?= get_template_directory_uri(); ?>/images/hero-people.png" alt="トップスライド画像" /> 
+                </div>     
           </div>
    <?php elseif(is_archive()):?>
     <?php 
