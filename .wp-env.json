@@ -11,5 +11,11 @@
     "https://downloads.wordpress.org/plugin/seo-simple-pack.zip",
     "https://downloads.wordpress.org/plugin/wps-menu-exporter.zip"
   ],
-  "themes": ["./deaikouryu-support"]
+  "themes": ["./deaikouryu-support"],
+  "port": 4013,
+  "env": {
+    "tests": {
+      "port": 4012
+    }
+  }
 }
