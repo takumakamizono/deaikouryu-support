@@ -29,9 +29,12 @@ main {
   display: flex;
   align-items: center;
   z-index: 100;
+  @include mq(md) {
+    height: $navHeight-tb;
+    background: $cWhite-o;
+  }
   @include mq(lg) {
     height: $navHeight;
-    background: $cWhite-o;
   }
 
   &.triggered {
@@ -40,6 +43,7 @@ main {
   }
 
   &__inner {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -90,21 +94,6 @@ main {
       }
     }
 
-    &:nth-child(5) {
-      @extend .btn;
-      background: $cBtnColor;
-      padding: 10px 15px;
-      box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
-      &:hover {
-        background-color: $mainColor;
-        box-shadow: none;
-      }
-    }
-    &:last-child {
-      & i {
-        font-size: 25px;
-      }
-    }
     & .sub-menu {
       position: absolute;
       left: 0;
@@ -145,45 +134,29 @@ main {
   }
 
   & .logo {
-    font-size: 18px;
-    justify-content: center;
+    width: clamp(50px, 10vw, 110px);
 
-    @include mq(md) {
-      justify-content: flex-start;
-      font-size: 23px;
-    }
+    position: relative;
+    top: 20px;
+
+    background: $cWhite;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px #333;
+
     & > a {
       text-decoration: none;
-      color: $cWhite;
+
       display: flex;
       align-items: center;
-      &::before {
-        height: 24px;
-        width: 24px;
-        margin-right: 5px;
-        content: "";
-        display: inline-block;
-        vertical-align: middle;
-        background: url(./images/logo_white.png) no-repeat;
-        background-size: contain;
-        @include mq(lg) {
-          height: 30px;
-          width: 30px;
-        }
-      }
     }
   }
-}
-
-.hero {
-  @extend .pb-lg;
 }
 
 .news {
   max-width: 1000px;
 
   @extend .content-width;
-  @extend .mb-lg;
+
   &__list {
     list-style: none;
     padding: 0;

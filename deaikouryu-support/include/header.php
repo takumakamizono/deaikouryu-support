@@ -1,9 +1,9 @@
 <div class="header__inner appear up">
-            <h1 class="logo item">
+            <div class="logo item">
               <a href="<?= esc_url(home_url('/')); ?>">
-             株式会社 川原建設
+             <img src="<?= get_template_directory_uri(); ?>/images/logo.png" alt="logo画像" srcset="">
              </a>
-           </h1>
+</div>
             <nav class="header__nav">
             <?php
                 $args=[
