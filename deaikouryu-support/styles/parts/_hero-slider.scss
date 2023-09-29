@@ -6,8 +6,6 @@
 }
 
 .hero {
-  // @extend .pb-sm;
-  // @extend .mb-lg;
   overflow: hidden;
   padding-top: $navHeight-m;
   width: 100%;
@@ -43,7 +41,7 @@
   &__title {
     @extend .font-lg;
     @extend .mb-md;
-    // font-family: "M PLUS Rounded 1c", sans-serif;
+    font-family: "M PLUS Rounded 1c", sans-serif;
   }
   &__desc {
     @extend .font-md;
