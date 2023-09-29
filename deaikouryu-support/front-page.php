@@ -16,6 +16,12 @@
           <div id="main-content">    
       
             <main>
+            <?php get_template_part('include/outline'); ?>
+            <?php get_template_part('include/worries'); ?>
+            <?php get_template_part('include/recruitment'); ?>
+            <?php get_template_part('include/benefits'); ?>
+            <?php get_template_part('include/auxiliary'); ?>
+
               <?php get_template_part('include/news'); ?>
               
             </main>
