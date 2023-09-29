@@ -1,7 +1,7 @@
 @use "../globals" as *;
 
 body {
-  font-family: "Noto Sans JP", "M PLUS Rounded 1c", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 
   color: $main-txt;
 }
@@ -41,6 +41,21 @@ img {
     padding-bottom: 150px !important;
   }
 }
+.pt-md {
+  padding-top: 30px !important;
+
+  @include mq(lg) {
+    padding-top: 60px !important;
+  }
+}
+
+.pt-lg {
+  padding-top: 80px !important;
+
+  @include mq(lg) {
+    padding-top: 150px !important;
+  }
+}
 
 .content-width {
   width: 90%;
@@ -67,6 +82,9 @@ img {
   }
 }
 
+.font-ssm {
+  font-size: clamp(11px, 1vw, 14px);
+}
 .font-sm {
   font-size: clamp(13px, 3vw, 16px);
 }
