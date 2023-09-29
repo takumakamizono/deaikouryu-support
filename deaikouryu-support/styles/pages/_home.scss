@@ -276,114 +276,86 @@ main {
   }
 }
 
-.company {
-  background: $cBgGray;
+.outline {
+  max-width: 1000px;
+  @extend .content-width;
   @extend .mb-lg;
-
-  &__inner {
-    position: relative;
-    z-index: 0;
-    @extend .flex;
-    justify-content: space-between;
-
-    padding: 15px 0;
-
-    @include mq(md) {
-      padding: 50px 0;
-      flex-direction: row-reverse;
-    }
-  }
-  &__img {
-    @extend .mb-sm;
-    height: 300px;
-    transition: box-shadow 0.5s ease 1.6s;
-
-    &.inview {
-      box-shadow: inset 0 0 30px $mainColor;
-    }
-
-    @include mq(md) {
-      flex-basis: 50%;
-    }
-
-    @include mq(lg) {
-      height: 400px;
-    }
-
-    & > img {
-      position: relative;
-      z-index: -1;
-      opacity: 1;
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  &__texts {
-    @extend .pb-sm;
-    padding: 0 15px;
-
-    @include mq(md) {
-      padding: 0 50px;
-      display: flex;
-      align-items: flex-end;
-      flex-basis: 47%;
-    }
-    @include mq(xl) {
-      padding: 50px 0px 50px 300px;
-    }
-
-    &.inview {
-      & .company__title::before {
-        @include animation($name: scaleX, $duration: 0.3s, $delay: 1.5s);
-      }
-    }
-  }
+  @extend .pt-lg;
 
   &__title {
-    color: $mainColor;
-    position: relative;
-    font-size: 30px;
-    @include mq(lg) {
-      font-size: 60px;
-    }
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(15px, 3vw, 38px);
+    @extend .mb-md;
 
-    &::before {
-      display: none;
-      position: absolute;
-      content: "";
-      height: 1px;
-      width: 280px;
-      top: 50%;
-      right: -300px;
-      background: $mainColor;
-      transform: scaleX(0);
-      transform-origin: left;
+    & .wrap {
+      font-family: "Noto Sans JP", sans-serif;
+      width: 40px;
+      height: 40px;
+      padding: 4px;
+      background: $cWhite;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
 
+      margin-right: 5px;
+      @include mq(md) {
+        width: 50px;
+        height: 50px;
+        font-size: 14px;
+      }
       @include mq(lg) {
-        display: block;
+        font-size: 20px;
+        width: 90px;
+        height: 90px;
       }
-      @include mq(xl) {
-        width: 350px;
-        right: -400px;
+
+      & > span {
+        color: $cPink;
+        line-height: 1.3;
+      }
+    }
+
+    &::after {
+      margin-left: 5px;
+      width: 36px;
+      height: 36px;
+      content: "";
+      display: inline-block;
+      background-image: url(./images/deai-man.png);
+      background-size: contain;
+      vertical-align: middle;
+      background-repeat: no-repeat;
+      @include mq(md) {
+        width: 50px;
+        height: 50px;
+        margin-left: 10px;
+      }
+      @include mq(lg) {
+        width: 90px;
+        height: 90px;
       }
     }
   }
-
-  &__description {
-    @include mq(lg) {
-      margin-bottom: 40px;
+  &__desc {
+    line-height: 1.3;
+    @extend .font-md;
+    @extend .mb-md;
+  }
+  &__img {
+    & > img {
+      margin: 0 auto;
+      width: 800px;
+      object-fit: contain;
     }
   }
-}
-
-@keyframes scaleX {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(1);
+  &__img-tit {
+    text-align: center;
+    @extend .font-sm;
+    @extend .mb-sm;
   }
 }
 
