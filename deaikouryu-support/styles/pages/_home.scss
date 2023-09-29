@@ -358,19 +358,46 @@ main {
     @extend .mb-sm;
   }
 }
-
-.works {
+.worries {
+  max-width: 1000px;
   @extend .content-width;
   @extend .mb-lg;
+  &__desc {
+    max-width: 750px;
+    margin: 0px auto;
+    padding: 20px;
+    background: $cWhite;
+    outline: 4px solid $cWhite;
+    outline-offset: 2px;
+    border: solid 2px $cPink;
+    border-radius: 10px;
+    box-sizing: border-box;
+    & > h3 {
+      @extend .font-lr;
+      text-align: center;
+      @extend .mb-sm;
+    }
+    & > ul {
+      @extend .font-sm;
 
-  &__inner {
-    @extend .flex;
-    justify-content: space-between;
+      padding-left: 10%;
+      line-height: 1.8;
+      & li {
+        position: relative;
+        list-style: none;
+        &::before {
+          content: "\025ce";
+          /* 配置を調整 */
+          position: absolute;
+          display: block;
+          top: 0.5px;
+          left: -21px;
+        }
+      }
+    }
   }
+}
 
-  &__title {
-    @extend .mb-sm;
-    @extend .font-sm;
   }
 
   &__item {
