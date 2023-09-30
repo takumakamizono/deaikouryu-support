@@ -456,233 +456,225 @@ main {
     @extend .mb-sm;
     margin: 0 auto;
   }
-.recruit {
-  @extend .content-width;
-  @extend .mb-lg;
-  &__btn {
-    text-align: center;
-    & > a {
-      width: 100%;
-      max-width: 300px;
-      border: 1px solid $cBlack;
-      &::after {
-        content: "\f054";
-        font-family: "Font Awesome 5 free";
-        font-weight: 600;
-        position: absolute;
-        right: 10px;
+  &__desc-heart-tit {
+    @extend .font-md;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  &__desc-heart-txts {
+    & ul {
+      list-style: none;
+      padding-left: 7px;
+      font-size: 12px;
+      line-height: 1.8;
+      & li {
+        position: relative;
+        list-style: none;
+        &::before {
+          content: "\025ce";
+          /* 配置を調整 */
+          position: absolute;
+          display: block;
+          top: 0.5px;
+          left: -15px;
+        }
       }
     }
   }
-}
-.inquiry {
-  @extend .content-width;
-  @extend .mb-lg;
-  &__btn {
-    text-align: center;
-    & > a {
-      background: $cBtnColor;
-      width: 100%;
-      max-width: 300px;
+  &__desc-entry {
+    @extend .mb-md;
 
-      color: $cWhite;
-      &::after {
-        content: "\f054";
-        font-family: "Font Awesome 5 free";
-        font-weight: 600;
-        position: absolute;
-        right: 10px;
+    & h4 {
+      position: relative;
+      @extend .font-md;
+      & > span {
+        margin-right: 5px;
       }
+    }
+    & p {
+      @extend .font-sm;
     }
   }
 }
-.info {
-  &-arrow {
+.benefits {
+  max-width: 1000px;
+  @extend .content-width;
+  @extend .mb-lg;
+  &__inner {
     position: relative;
-    left: 50%;
-    bottom: 50px;
+    max-width: 750px;
+    margin: 0 auto;
+    background-image: radial-gradient(
+      circle at 10% 20%,
+      rgb(245, 255, 204) 0%,
+      rgb(255, 226, 226) 90%
+    );
 
-    z-index: 2;
-    height: 98px;
-    width: 22px;
-    overflow: hidden;
-  }
-  &-contents {
-    @extend .mb-lg;
-    text-align: center;
-    & > h3 {
-      @extend .mb-md;
-      font-size: 19px;
-      @include mq(md) {
-        font-size: 25px;
-      }
-      @include mq(lg) {
-        font-size: 36px;
-      }
-    }
-  }
-}
+    outline: 4px solid $cWhite;
+    outline-offset: 2px;
 
-.associated {
-  &__inner {
-    @extend .content-width;
-    @extend .mb-lg;
-  }
-  &__imgs {
-    display: flex;
-    justify-content: space-around;
-  }
-  &__img {
-    flex-basis: 28%;
-    & > img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-  }
-}
+    border-radius: 10px;
+    box-sizing: border-box;
+    &::after {
+      position: absolute;
 
-.map {
-  &__inner {
-    width: 100%;
-    height: 300px;
-    @include mq(lg) {
-      height: 450px;
-    }
-  }
-}
-
-.footer {
-  background: $cBgGray;
-
-  &__inner {
-    padding: 60px 0;
-    @extend .content-width;
-    @extend .flex;
-    justify-content: space-between;
-  }
-  &__left {
-    flex-basis: 68%;
-  }
-  &__right {
-    flex-basis: 30%;
-  }
-  &__nav {
-    @extend .flex;
-    justify-content: space-between;
-    align-items: center;
-    display: none;
-    @include mq(lg) {
-      display: block;
-    }
-  }
-
-  &__ul {
-    @extend .flex;
-    list-style: none;
-    padding: 0;
-  }
-
-  &__li {
-    margin: 10px;
-
-    @include mq(md) {
-      margin-left: 0;
-      margin-right: 30px;
-    }
-
-    & > a {
-      color: $cWhite;
-      text-decoration: none;
-    }
-    &:last-child {
-      & i {
-        font-size: 25px;
-      }
-    }
-  }
-
-  & .logo {
-    font-size: 17px;
-
-    @include mq(lg) {
-      font-size: 35px;
-      display: flex;
-      align-items: center;
-    }
-    &::before {
-      height: 24px;
-      width: 24px;
-      margin-right: 5px;
+      bottom: 150px;
+      right: -5px;
+      width: 83px;
+      height: 83px;
       content: "";
       display: inline-block;
-      vertical-align: middle;
-      background: url(./images/logo_white.png) no-repeat;
+      background-image: url(./images/card.png);
       background-size: contain;
-      @include mq(lg) {
-        height: 35px;
-        width: 35px;
+      vertical-align: middle;
+      background-repeat: no-repeat;
+      @include mq(ssm) {
+        bottom: 116px;
+        right: -15px;
+        width: 110px;
+        height: 110px;
       }
-    }
-  }
-  &__address {
-    margin-top: 15px;
-    list-style: none;
-    padding: 0;
-    @extend .font-sm;
-    color: $cWhite;
-    @extend .mb-sm;
-  }
-  &__copyright {
-    background: $cWhite;
-    color: $main-txt;
-    @extend .font-sm;
-    text-align: center;
-    padding: 30px 0;
-    & > span {
-      display: block;
       @include mq(md) {
-        display: inline;
+        bottom: 106px;
+        right: -5px;
+        width: 120px;
+        height: 120px;
+      }
+      @include mq(lg) {
+        bottom: 110px;
+        width: 150px;
+        height: 150px;
       }
     }
   }
-  &__img {
-    & img {
-      margin: 0 auto;
+  &__tit {
+    background: #e3007f;
+    padding: 10px;
+
+    & > h3 {
+      @extend .font-lr;
+      text-align: center;
+      color: $cWhite;
+      position: relative;
+      z-index: 100;
+    }
+  }
+
+  &__desc {
+    @extend .mb-md;
+    @extend .font-sm;
+    padding: 10px 20px;
+    & p {
+      &:nth-child(2) {
+        @extend .font-ssm;
+        margin-top: 5px;
+      }
+    }
+    @include mq(md) {
+      padding: 20px 30px;
+    }
+    @include mq(lg) {
+      padding: 40px 50px;
+    }
+  }
+  &__pdf {
+    max-width: 750px;
+    margin: 0 auto;
+    display: flex;
+  }
+  &__pdf-btn {
+    margin-right: 30px;
+    &::before {
+      content: "\025cf";
+      width: 20px;
+      height: 20px;
+      color: #2e5895;
+    }
+    & > a {
+      color: #2e5895;
+      text-decoration: none;
+    }
+  }
+}
+.auxiliary {
+  max-width: 1000px;
+  @extend .content-width;
+  @extend .mb-lg;
+  &__desc {
+    max-width: 750px;
+    margin: 0px auto;
+    padding: 20px;
+    background: $cWhite;
+    outline: 4px solid $cWhite;
+    outline-offset: 2px;
+    border: solid 2px #54c2f0;
+    border-radius: 10px;
+    box-sizing: border-box;
+    & > h3 {
+      @extend .font-lr;
+      text-align: center;
+      @extend .mb-sm;
+    }
+
+    & > ul {
+      @extend .font-sm;
+      padding-left: 5%;
+      line-height: 1.8;
+      @extend .mb-sm;
+
+      & li {
+        position: relative;
+        list-style: none;
+        margin-bottom: 10px;
+        &::before {
+          content: "\025ce";
+          /* 配置を調整 */
+          position: absolute;
+          display: block;
+          top: 0.5px;
+          left: -21px;
+        }
+        & > span {
+          font-weight: 800;
+        }
+      }
+    }
+    &-txt {
+      margin-bottom: 16px;
+      & p {
+        @extend .font-md;
+        & > span {
+          @extend .font-sm;
+          display: block;
+        }
+      }
+    }
+  }
+  &__btn {
+    text-align: center;
+    & > span {
+      margin-right: 20px;
+      font-size: 14px;
+    }
+    & > a {
+      background: #e3007f;
+      color: $cWhite;
+      font-size: 14px;
+      border-radius: 3px;
     }
   }
 }
 
-.logo {
-  font-family: "Noto Serif JP", serif;
-  font-size: 30px;
-  display: flex;
-  color: $cWhite;
-  font-weight: 600;
-}
-
-.side {
-  display: none;
-  position: fixed;
-  top: 70%;
-  transform: translateY(-50%);
-  transition: all 0.3s ease;
-
-  @include mq(xl) {
+.sp {
+  display: block;
+  @include mq(sm) {
+    display: none;
+  }
+  @include mq(lg) {
     display: block;
   }
+}
 
-  & .tween-animate-title {
-    color: $cBlack;
-    text-decoration: none !important;
-    padding: 10px 40px;
-    vertical-align: middle;
-    letter-spacing: 2px;
-    border-radius: 5px;
-  }
-
-  &.left {
-    left: -50px;
 .footer {
   background: $cBgGray;
 
