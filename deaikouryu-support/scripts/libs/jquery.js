@@ -29,3 +29,15 @@ jQuery(function () {
     return false;
   });
 });
+
+$(window).on("load", function () {
+  var url = $(location).attr("href");
+  if (url.indexOf("#") != -1) {
+    var anchor = url.split("#");
+    var target = $("#" + anchor[anchor.length - 1]);
+    if (target.length) {
+      var pos = Math.floor(target.offset().top) - 200;
+      $("html, body").animate({ scrollTop: pos }, 500);
+    }
+  }
+});
