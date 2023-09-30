@@ -669,9 +669,44 @@ main {
   display: block;
   @include mq(sm) {
     display: none;
+.join-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+  z-index: 1000;
+
+  &.triggered {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 10px 0 25px -10px rgba(102, 102, 102, 0.5);
+
+    transition-delay: 0.5s;
+    height: 65px;
+    @include mq(md) {
+      height: 100px;
+    }
   }
-  @include mq(lg) {
-    display: block;
+  &__inner {
+    @extend .content-width;
+    height: 100%;
+    padding: 10px 0;
+  }
+  &__btn {
+    text-align: center;
+    & > a {
+      margin: 0 auto;
+      background-color: $cPink !important;
+      padding: 10px 30px;
+      width: 90%;
+      max-width: 280px;
+      color: $cWhite;
+      border-radius: 30px;
+      @include mq(md) {
+        padding: 20px 30px;
+      }
+    }
   }
 }
 

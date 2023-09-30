@@ -1,6 +1,7 @@
 class Main {
   constructor() {
     this.header = document.querySelector(".header");
+    this.banner = document.querySelector(".join-banner");
     this.hero = new HeroSlider(".swiper");
     this.sides = document.querySelectorAll(".side");
     this._observers = [];
@@ -23,6 +24,9 @@ class Main {
         rootMargin: "-300px 0px",
       }),
       new ScrollObserver(".nav-trigger", this._navAnimation.bind(this), {
+        once: false,
+      }),
+      new ScrollObserver(".nav-trigger", this._navBanner.bind(this), {
         once: false,
       }),
       new ScrollObserver(".swiper", this._toggleSlideAnimation.bind(this), {
@@ -54,6 +58,13 @@ class Main {
       this.header.classList.remove("triggered");
     } else {
       this.header.classList.add("triggered");
+    }
+  }
+  _navBanner(el, inview) {
+    if (inview) {
+      this.banner.classList.remove("triggered");
+    } else {
+      this.banner.classList.add("triggered");
     }
   }
 

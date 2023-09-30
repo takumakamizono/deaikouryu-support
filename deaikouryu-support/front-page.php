@@ -29,6 +29,7 @@
           </div>
         </div>
         <?php get_template_part('include/footer'); ?>
+        <?php get_template_part('include/join-banner'); ?>
   
       </div>
       <?php get_template_part('include/mobile-menu');?>
