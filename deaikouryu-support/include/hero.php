@@ -1,7 +1,7 @@
 <?php if(is_home()): ?>
 <div class="hero">
   <div class="hero__inner">
-               <h1 class="hero__title">鹿児島市企業・団体間交流・出会いサポート事業</h1>
+               <h1 class="hero__title">鹿児島市企業・団体間交流・<br class="sp2"> 出会いサポート事業</h1>
                   <img src="<?= get_template_directory_uri(); ?>/images/hero-catch.png" alt="トップスライド画像" />  
                   <p class="hero__desc">企業・団体間のつながりで、独身の方の出会いや交流を一緒に応援しませんか？</p>         
                   <img src="<?= get_template_directory_uri(); ?>/images/hero-people.png" alt="トップスライド画像" /> 
