@@ -1,4 +1,4 @@
-<section class="outline">
+<section id="outline" class="outline">
   <h2 class="outline__title">
     <span class="wrap"><span>事業<br>概要</span></span>いつまでも夢や希望を抱ける<br class="sp"> 鹿児島市であるために
   </h2>
