@@ -192,10 +192,11 @@ img {
 .breadcrumb {
   color: $main-txt;
   font-size: 10px;
+  @extend .mb-md;
   &__inner {
-    padding: 10px 0 40px 0;
+    padding: 10px 0 10px 0;
     @include mq(lg) {
-      padding: 10px 0 80px 0;
+      padding: 20px 0 20px 0;
     }
     & i {
       margin: 0 10px;
@@ -466,5 +467,21 @@ img {
         }
       }
     }
+  }
+}
+
+.sp {
+  display: block;
+  @include mq(sm) {
+    display: none;
+  }
+  @include mq(lg) {
+    display: block;
+  }
+}
+.sp2 {
+  display: block;
+  @include mq(sm) {
+    display: none;
   }
 }
