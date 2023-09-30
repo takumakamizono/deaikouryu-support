@@ -15,9 +15,9 @@ $cMenuOpen: $cPink;
 
   & .logo {
     padding: 0 40px;
-    font-size: 23px;
-    color: $mainColor;
-    font-weight: 800;
+
+    max-width: 200px;
+    margin: 0 auto;
     margin-bottom: 10px;
   }
 
@@ -96,15 +96,6 @@ $cMenuOpen: $cPink;
       color: $main-txt;
       text-decoration: none !important;
       font-size: 14px;
-    }
-    &:last-child {
-      &::after {
-        display: none;
-      }
-
-      & > a {
-        margin-left: 0;
-      }
     }
   }
 }
