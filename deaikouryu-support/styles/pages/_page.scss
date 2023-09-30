@@ -3,6 +3,7 @@
 @use "../parts/button" as *;
 
 .page-content {
+  background: $cWhite;
   @extend .mb-lg;
   &__inner {
     @extend .content-width;
@@ -355,5 +356,105 @@
     font-weight: bold;
     border-bottom: 2px solid $cBgGray;
     @extend .mb-sm;
+  }
+}
+
+/* Contact Form7 */
+
+.contact7 {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 12px;
+  & input,
+  & textarea {
+    width: 100%;
+    border: none;
+    background: $cBgGray;
+    padding: 15px 20px;
+    border-radius: 5px;
+  }
+  & tr {
+    @extend .flex;
+    border-bottom: 2px dotted $lightGray;
+
+    padding: 20px 0;
+    @include mq(md) {
+      justify-content: space-between;
+      align-items: center;
+    }
+    @include mq(lg) {
+      padding: 40px 0;
+    }
+  }
+  & th {
+    font-weight: bold;
+    flex-basis: 28%;
+    margin-bottom: 10px;
+    & > p {
+      display: flex;
+      align-items: center;
+    }
+    @include mq(lg) {
+      margin-bottom: 0;
+    }
+  }
+  & td {
+    flex-basis: 70%;
+  }
+  & .must {
+    background: $cPink;
+  }
+  & .optional {
+    background: $lightGray;
+  }
+  & .optional,
+  & .must {
+    font-weight: 700;
+    color: $cWhite;
+    border-radius: 3px;
+    font-size: 10px;
+    margin-left: 10px;
+    padding: 5px 10px;
+    letter-spacing: 2px;
+  }
+  & .wpcf7-list-item {
+    margin-left: 0;
+  }
+}
+
+.btn_contact7 {
+  text-align: center;
+  margin-top: 30px;
+  & input {
+    height: 50px;
+    width: 100%;
+    max-width: 400px;
+    background-color: $cBgGray;
+    color: $main-txt;
+    font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    border: 1px solid $cBgGray;
+
+    transition: 0.3s;
+    @include mq(lg) {
+      width: 70%;
+      background-color: $cBgGray;
+
+      font-size: 1.1em;
+      font-weight: bold;
+      letter-spacing: 0.2em;
+      border: 1px solid $cBgGray;
+
+      transition: 0.3s;
+    }
+    &:hover {
+      background-color: $cWhite;
+      color: $cBgGray;
+      @include mq(lg) {
+        background-color: $cWhite;
+        color: $cBgGray;
+      }
+    }
   }
 }
