@@ -703,6 +703,9 @@ main {
     @extend .content-width;
     @extend .flex;
     justify-content: space-between;
+    @include mq(md) {
+      padding: 60px 0 86px 0;
+    }
   }
   &__left {
     flex-basis: 68%;
