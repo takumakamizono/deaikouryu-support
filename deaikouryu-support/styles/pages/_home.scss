@@ -79,19 +79,8 @@ main {
       text-decoration: none;
       text-transform: uppercase;
       padding: 10px 15px;
-    }
-    &:not(:nth-child(5), :last-child) {
-      &.current-menu-item {
-        & > a {
-          font-weight: 800;
-          border-bottom: 2px solid $cWhite;
-        }
-      }
-      & > a {
-        &:hover {
-          font-weight: 800;
-          border-bottom: 2px solid $cWhite;
-        }
+      &:hover {
+        color: $cPink;
       }
     }
 
@@ -665,10 +654,6 @@ main {
   }
 }
 
-.sp {
-  display: block;
-  @include mq(sm) {
-    display: none;
 .join-banner {
   position: fixed;
   bottom: 0;
