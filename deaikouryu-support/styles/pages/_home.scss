@@ -398,70 +398,64 @@ main {
   }
 }
 
+.recruitment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  @extend .content-width;
+  @extend .mb-md;
+  &__desc {
+    max-width: 750px;
   }
-
-  &__item {
+  &__desc-top {
     @extend .mb-md;
-
-    @include mq(md) {
-      flex-basis: 49%;
-    }
-    @include mq(lg) {
-      flex-basis: 32%;
-    }
-
-    & time {
-      font-family: new-order, sans-serif;
-      text-decoration: none;
-      font-size: 12px;
-    }
-  }
-
-  &__btn {
-    text-align: center;
-    flex-basis: 100%;
-
-    & > a {
-      max-width: 300px;
-      width: 100%;
-      border: none;
-      background: #2e5895;
-      color: white;
-      &::after {
-        content: "\f054";
-        font-family: "Font Awesome 5 free";
-        font-weight: 600;
-        position: absolute;
-        right: 10px;
+    & p {
+      color: $cPink;
+      &:nth-of-type(1) {
+        @extend .font-md;
+        @extend .mb-sm;
+      }
+      &:nth-of-type(2) {
+        @extend .font-sm;
+      }
+      @include mq(md) {
+        text-align: center;
       }
     }
-  }
-  &__img {
-    width: 100%;
-    height: 180px;
-    @include mq(md) {
-      height: 230px;
-    }
-    & > img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    & h3 {
+      border-top: 3px solid $cPink;
+      border-bottom: 3px solid $cPink;
+      text-align: center;
+      padding: 20px 0;
+      margin-bottom: 10px;
+      @extend .font-lr;
     }
   }
-  &__contents {
-    padding: 10px 5px;
+  &__desc-second {
+    @extend .mb-md;
+
+    & h4 {
+      @extend .font-md;
+    }
+    & p {
+      @extend .font-sm;
+    }
   }
-  &__desc {
-    font-size: 13px;
+  &__desc-heart {
+    @extend .flex;
+    justify-content: space-between;
   }
-  &__notInfo {
-    width: 100%;
-    height: 30vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  &__desc-heart-left,
+  &__desc-heart-right {
+    flex-basis: 48%;
+    @extend .mb-md;
   }
-}
+  &__desc-heart-img {
+    max-width: 300px;
+    @extend .mb-sm;
+    margin: 0 auto;
+  }
 .recruit {
   @extend .content-width;
   @extend .mb-lg;
