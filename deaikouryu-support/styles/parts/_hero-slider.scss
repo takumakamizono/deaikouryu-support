@@ -51,30 +51,36 @@
 }
 
 .hero-sub {
+  height: 23vh;
+  width: 100%;
+  background-image: radial-gradient(
+    circle at 10% 20%,
+    rgb(245, 255, 204) 0%,
+    rgb(255, 226, 226) 90%
+  );
+  @include mq(md) {
+    height: 30vh;
+  }
   @include mq(lg) {
     padding-top: $navHeight;
+    height: 35vh;
   }
   &__inner {
     position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(46, 87, 149, 0.5);
-    }
+    width: 100%;
+    height: 100%;
   }
   &__titles {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -30%);
-    color: $cWhite;
+    color: $main-txt;
+    @include mq(lg) {
+      transform: translate(-50%, -50%);
+    }
   }
   &__maintitle {
-    font-family: new-order, sans-serif;
     text-transform: uppercase;
     font-size: 20px;
     text-align: center;
@@ -91,26 +97,8 @@
         font-size: 30px;
       }
       @include mq(lg) {
-        font-size: 45px;
+        font-size: 40px;
       }
-    }
-  }
-  &__subtitle {
-    text-align: center;
-
-    font-weight: 500;
-    font-size: 12px;
-  }
-  &__img {
-    height: 25vh;
-    @include mq(lg) {
-      height: 40vh;
-    }
-
-    & > img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
     }
   }
 }

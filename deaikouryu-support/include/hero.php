@@ -57,16 +57,10 @@ $slug = $page->post_name;
         <div class="hero-sub">    
         <div class="hero-sub__inner">
               <div class="hero-sub__titles">
-              <h2 class="hero-sub__maintitle "><?= strtoupper($post->post_name); ?></h2>
-              <p class="hero-sub__subtitle"><?php the_title(); ?></p>
+              <h2 class="hero-sub__maintitle "><?php the_title(); ?></h2>
+              <p class="hero-sub__subtitle"></p>
               </div>
-              <div class="hero-sub__img"> 
-              <?php if(has_post_thumbnail()): ?>        
-              <?php the_post_thumbnail(); ?> 
-              <?php else: ?>
-                <img src="<?= get_template_directory_uri(); ?>/images/subtop-image04.png" alt="noimage画像" />
-               <?php endif; ?>
-            </div>     
+              
         </div>
       </div>
       <?php elseif(is_404()): ?>
