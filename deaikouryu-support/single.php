@@ -28,11 +28,6 @@
                      <h2><?php the_title(); ?></h2>         
                     </div>
                     <div class="single__content-des">
-                    <div class="single__content-des-img">
-                      <?php if(the_post_thumbnail()): ?>
-                      <?php the_post_thumbnail('medium'); ?>
-                        <?php endif; ?>
-                        </div>
                         <div class="single__content-text">
                       <?php the_content(); ?>
                        </div>
@@ -61,7 +56,7 @@ $link = get_category_link($cat_id);
           </div>
         </div>
         <?php get_template_part('include/footer'); ?>
-  
+        <?php get_template_part('include/join-banner'); ?>  
       </div>
       <?php get_template_part('include/mobile-menu');?>
     </div>
