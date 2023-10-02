@@ -16,16 +16,9 @@
       <div class="hero-sub">    
         <div class="hero-sub__inner">
               <div class="hero-sub__titles">               
-              <h2 class="hero-sub__maintitle "><?=  esc_html($cat_slug); ?></h2>
-              <p class="hero-sub__subtitle"><?=  esc_html($cat_name); ?></p>           
+              <h2 class="hero-sub__maintitle "><?=  esc_html($cat_name); ?></h2>       
               </div>
-              <div class="hero-sub__img"> 
-                <?php if(is_category('news') || in_category('news')):  ?>      
-                  <img src="<?php the_field('news_img',210);?>" alt="お知らせのヘッダー画像">           
-                <?php elseif(is_category('works') || in_category('works') ): ?>
-                  <img src="<?php the_field('works_img',210);?>" alt="施工実績のヘッダー画像">                     
-             <?php endif; ?>
-            </div>     
+            
         </div>
       </div>
       <?php elseif(is_single()):?>
@@ -37,16 +30,9 @@
       <div class="hero-sub">    
         <div class="hero-sub__inner">
               <div class="hero-sub__titles">               
-              <h2 class="hero-sub__maintitle "><?=  esc_html($cat_slug); ?></h2>
-              <p class="hero-sub__subtitle"><?=  esc_html($cat_name); ?></p>           
+              <h2 class="hero-sub__maintitle "><?=  esc_html($cat_name); ?></h2>           
               </div>
-              <div class="hero-sub__img"> 
-                <?php if(is_category('news') || in_category('news')):  ?>  
-                 <img src="<?php the_field('news_img',210);?>" alt="お知らせのヘッダー画像">
-                <?php elseif(is_category('works') || in_category('works') ): ?>
-                  <img src="<?php the_field('works_img',210);?>" alt="施工実績のヘッダー画像">  
-             <?php endif; ?>
-            </div>     
+              
         </div>
       </div>
       <?php elseif(is_page()) : ?>
