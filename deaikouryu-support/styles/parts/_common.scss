@@ -33,6 +33,13 @@ img {
 .pb-sm {
   padding-bottom: 16px !important;
 }
+.pb-md {
+  padding-bottom: 30px !important;
+
+  @include mq(lg) {
+    padding-bottom: 60px !important;
+  }
+}
 
 .pb-lg {
   padding-bottom: 80px !important;
@@ -106,11 +113,11 @@ img {
 .section-titles {
   text-align: center;
   @extend .mb-md;
+  @extend .font-lg;
 }
 
 .main-title {
   @extend .font-xl;
-  font-family: new-order, sans-serif;
   margin-bottom: 0;
   display: block;
   font-weight: 300;
