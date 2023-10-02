@@ -15,15 +15,15 @@
         <?php get_template_part('include/hero'); ?>
           <div id="main-content">    
       
-            <main>
+            <main class="front-page-bg">
+              <?php get_template_part('include/news'); ?>
             <?php get_template_part('include/outline'); ?>
             <?php get_template_part('include/worries'); ?>
             <?php get_template_part('include/recruitment'); ?>
             <?php get_template_part('include/benefits'); ?>
             <?php get_template_part('include/auxiliary'); ?>
-
-              <?php get_template_part('include/news'); ?>
-              
+            <?php get_template_part('include/news-event'); ?>  
+            <?php get_template_part('include/record'); ?>  
             </main>
           
           </div>
