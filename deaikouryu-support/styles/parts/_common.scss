@@ -130,47 +130,15 @@ img {
   color: $cSubTitle;
 }
 
-.arrow-downarrow {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 6px;
-  @include animation(
-    $name: kf-arrow-anime,
-    $iteration-count: infinite,
-    $duration: 2s,
-    $timing-function: linear
-  );
-}
-
-.arrow-scrolltext {
-  position: absolute;
-  transform: rotate(90deg);
-  color: rgba(255, 255, 255, 0.7);
-  left: -8px;
-  top: 11px;
-  font-size: 1.2em;
-}
-
-@keyframes kf-arrow-anime {
-  0%,
-  50%,
-  100% {
-    transform: translateY(-10%);
-  }
-  30% {
-    transform: none;
-  }
-}
-
 #page_top {
   width: 50px;
   height: 50px;
   position: fixed;
   right: 0;
   bottom: 0;
-  background: $cBtnColor;
+  background: $cPink;
   opacity: 0.6;
+  z-index: 10000;
   & > a {
     position: relative;
     display: block;
@@ -401,80 +369,6 @@ img {
   /* マウスオーバー */
   background: $lightGray;
   color: $cBlack;
-}
-
-.news-cate {
-  @extend .mb-md;
-  padding: 20px;
-  background: $cBgGray;
-  @include mq(lg) {
-    padding: 30px 50px;
-  }
-  & > p {
-    &::before {
-      font-family: "Font Awesome 5 Free";
-      font-weight: 600;
-      content: "\f07c";
-    }
-  }
-
-  &__ul {
-    @extend .flex960;
-    list-style: none;
-    padding: 0;
-
-    justify-content: space-between;
-    & li {
-      flex-basis: 49%;
-      & a {
-        width: 100%;
-        padding: 15px 10px;
-        font-size: 14px;
-        @include mq(ssm) {
-          font-size: 16px;
-        }
-        @include mq(md) {
-          padding: 20px 10px;
-          font-size: 20px;
-        }
-
-        & span {
-          &:nth-child(2) {
-            margin-left: 5px;
-            text-transform: uppercase;
-
-            font-family: new-order, sans-serif;
-            font-weight: 100;
-            @include mq(md) {
-              margin-left: 10px;
-            }
-          }
-        }
-      }
-
-      &:nth-child(2) {
-        margin-right: 0;
-      }
-      &.current {
-        & > a {
-          background: $cBtnColor;
-          color: $cWhite;
-          font-weight: 600;
-          border-top: 4px solid #f6bc6c;
-          border-right: 4px solid #794b09;
-          border-bottom: 4px solid #794b09;
-          border-left: 4px solid #f6bc6c;
-
-          &:hover {
-            border-top: 4px solid #794b09;
-            border-right: 4px solid #f6bc6c;
-            border-bottom: 4px solid #f6bc6c;
-            border-left: 4px solid #794b09;
-          }
-        }
-      }
-    }
-  }
 }
 
 .sp {
