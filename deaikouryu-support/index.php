@@ -18,9 +18,9 @@
             <main>
                <section class="notice">
                 <?php get_template_part('include/breadcrumb'); ?> 
-                <?php get_template_part('include/news-categories'); ?>             
+                   
 
-                <div class="works__inner"> 
+                <div class="notice__inner"> 
 
                   <?php if(have_posts()): ?>                
                
