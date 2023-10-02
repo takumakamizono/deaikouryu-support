@@ -1,10 +1,7 @@
 <section class="news" >
-            <div class="section-titles">
-                  <h2 class="main-title">
-                    NEWS
-                  </h2>
-                </div>
+
                 <div  class="news__inner">
+                
                 <?php
                      $args=[
                        'post_type'=> 'post',
@@ -13,9 +10,11 @@
                      ];
                      $the_query = new WP_Query($args);
                     ?>
-                  <?php if($the_query->have_posts()): ?>                    
+                  <?php if($the_query->have_posts()): ?> 
+                                
                   <ul class="news__list appear right"> 
               <?php while($the_query->have_posts()):$the_query->the_post(); ?>
+              <?php the_category(); ?> 
             <?php get_template_part('include/news-inside'); ?>
             <?php endwhile; ?>
                   </ul>
