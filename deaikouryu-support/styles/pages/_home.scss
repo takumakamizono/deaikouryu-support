@@ -164,12 +164,11 @@ main {
     @extend .mb-md;
   }
   &__box {
-    border-bottom: 0.5px solid ghostwhite;
-
+    border-bottom: 0.5px solid $lightGray;
     display: block;
     margin-bottom: 10px;
     transition: 0.3s ease;
-    padding: 3px 5px;
+    padding: 5px 5px;
 
     &:hover {
       // background-color: $cImage-color;
@@ -290,6 +289,7 @@ main {
     }
   }
 }
+
 .news-event {
   @extend .pt-lg;
   @extend .pb-md;
@@ -931,6 +931,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: $cWhite;
   }
 }
 
@@ -982,6 +983,10 @@ main {
   }
   &__contact-btn {
     text-align: center;
+    & .btn {
+      border: 1px solid $lightGray;
+      border-radius: 3px;
+    }
     @include mq(md) {
       text-align: left;
     }
