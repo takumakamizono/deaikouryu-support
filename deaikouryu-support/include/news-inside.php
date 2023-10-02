@@ -1,7 +1,7 @@
 <li id="post-<?php the_ID(); ?>"<?php post_class('news__box item') ?> >
 <a href="<?php the_permalink(); ?>">
                                  
-                       <ul class="cat fontSerif">
+                       <ul class="cat">
                        <?php categories_label(); ?>
                        </ul>
                    
