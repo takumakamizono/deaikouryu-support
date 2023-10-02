@@ -3,8 +3,8 @@
             <div class="footer__left">
               <div class="footer__left-inner">
           <div class="footer__left-desc item">
-             <p> 企業団体向け</p>            
-             <p><span>みんな出会い</span>サポートセンター事務局</p>
+             <p>企業団体向け</p>            
+             <p><span>出会い交流みんなで</span>サポートセンター事務局</p>
             </div> 
               
           <div class="footer__contact-btn">
