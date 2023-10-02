@@ -107,16 +107,16 @@ function redirect_thanks_page() {
 }
 
 function twpp_change_excerpt_length( $length ) {
-  return 20; 
+  return 150; 
 }
 add_filter( 'excerpt_length', 'twpp_change_excerpt_length', 999 );
 
-function twpp_change_excerpt_more( $more ) {
-  $html = '<a href="' . esc_url( get_permalink() ) . '">[...続きを読む]</a>';
-  return $html;
-}
+// function twpp_change_excerpt_more( $more ) {
+//   $html = '<a href="' . esc_url( get_permalink() ) . '">[...続きを読む]</a>';
+//   return $html;
+// }
 
-add_filter( 'excerpt_more', 'twpp_change_excerpt_more' );
+// add_filter( 'excerpt_more', 'twpp_change_excerpt_more' );
 
 
 
