@@ -143,13 +143,23 @@ main {
 }
 
 .news {
-  max-width: 1000px;
+  @extend .pt-lg;
+  @extend .pb-lg;
+  background-color: #d7eeff;
 
-  @extend .content-width;
+  &__inner {
+    position: relative;
+    background: $cWhite;
+    max-width: 1000px;
+    @extend .content-width;
+    border-radius: 0 20px 20px 20px;
+    padding: 20px;
+  }
 
   &__list {
     list-style: none;
     padding: 0;
+    @extend .mb-md;
   }
   &__box {
     border-bottom: 0.5px solid ghostwhite;
@@ -172,22 +182,112 @@ main {
       height: 100%;
       display: inline-block;
     }
-    & .cat {
-      min-width: 64px;
-      display: inline-block;
+
+    & time {
+      font-family: new-order, sans-serif;
+      position: relative;
+      padding-right: 20px;
+
       font-size: 12px;
-      font-weight: 800;
-      margin-right: 10px;
-      padding: 2px 8px;
-      border-radius: 2px;
-      flex-basis: 18%;
-      text-align: center;
-      background-color: $mainColor;
-      color: $cWhite;
-      & li {
-        list-style-type: none;
+      display: inline-block;
+      @include mq(md) {
+        width: 160px;
+      }
+      @include mq(lg) {
+        position: relative;
+        padding-right: 150px;
+        margin-right: 20px;
+        width: 250px;
+        &::before {
+          background-color: $cWhite;
+          @include mq(lg) {
+            content: "";
+            position: absolute;
+            right: 22px;
+            top: 50%;
+            height: 1px;
+
+            width: 100px;
+          }
+        }
       }
     }
+  }
+  &__des {
+    font-family: "Noto Sans JP", sans-serif;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: 3px;
+
+    @include mq(md) {
+      font-size: 16px;
+      display: inline-block;
+      margin-top: 0;
+    }
+  }
+
+  &__notinfo {
+    text-align: center;
+    padding: 80px 0;
+    & > p {
+      margin: 0;
+      @extend .font-md;
+      font-weight: bold;
+    }
+  }
+  &__btn {
+    text-align: center;
+    margin-top: 30px;
+    & .btn {
+      max-width: 300px;
+      width: 100%;
+      border: 1px solid $cSubTitle;
+      border-radius: 30px;
+      color: $main-txt;
+      &::after {
+        content: "\f054";
+        font-family: "Font Awesome 5 free";
+        font-weight: 600;
+        position: absolute;
+        right: 10px;
+      }
+    }
+  }
+  & .post-categories {
+    position: absolute;
+    top: -44px;
+    left: 0;
+    background: $cWhite;
+    padding: 10px 30px;
+    border-radius: 10px 10px 0 0;
+    & li {
+      list-style: none;
+      & > a {
+        color: $main-txt;
+        text-decoration: none;
+        font-size: 14px;
+      }
+    }
+  }
+  & .cat {
+    min-width: 64px;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    margin-right: 10px;
+    padding: 2px 8px;
+    border-radius: 2px;
+    flex-basis: 18%;
+    text-align: center;
+    background-color: $cBlue;
+    color: $cWhite;
+    & li {
+      list-style-type: none;
+    }
+  }
+}
 
     & time {
       font-family: new-order, sans-serif;
