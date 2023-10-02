@@ -21,7 +21,7 @@
            <?php else: ?>
 
 <div class="record__notInfo">
-                      <p>現在、施工実績は準備中です</p>
+                      <p>現在、イベント開催実績は準備中です</p>
                     </div>
 
             <?php endif; ?>

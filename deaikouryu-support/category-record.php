@@ -28,7 +28,7 @@
                   </ul>
                   <?php else: ?>
                   <div class="notice__notinfo">
-                    <p>新しい情報はありません</p>
+                    <p>現在、イベント開催実績は準備中です</p>
                     <div class="notice__btn">
                       <a
                         class="btn slide-bg"
