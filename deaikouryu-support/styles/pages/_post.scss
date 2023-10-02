@@ -79,3 +79,47 @@
     }
   }
 }
+
+.record-arc {
+  @extend .content-width;
+  @extend .mb-lg;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+  &__item {
+    @extend .mb-md;
+  }
+  &__item-link {
+    @extend .flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: $main-txt;
+  }
+  &__contents {
+    padding: 20px 10px;
+    @extend .font-sm;
+    @include mq(md) {
+      padding: 30px 20px;
+    }
+    @include mq(lg) {
+      padding: 40px 30px;
+    }
+  }
+  &__title {
+    @extend .font-md;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  &__img {
+    flex-basis: 29%;
+    & > img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__contents {
+    flex-basis: 69%;
+  }
+}
