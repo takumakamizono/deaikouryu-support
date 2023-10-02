@@ -435,10 +435,10 @@ main {
 }
 
 .outline {
+  @extend .pt-md;
   max-width: 1000px;
   @extend .content-width;
   @extend .mb-lg;
-  @extend .pt-lg;
 
   &__title {
     font-family: "M PLUS Rounded 1c", sans-serif;
@@ -757,7 +757,7 @@ main {
 .auxiliary {
   max-width: 1000px;
   @extend .content-width;
-  @extend .mb-lg;
+  @extend .pb-lg;
   &__desc {
     max-width: 750px;
     margin: 0px auto;
