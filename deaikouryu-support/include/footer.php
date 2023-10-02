@@ -4,7 +4,7 @@
               <div class="footer__left-inner">
           <div class="footer__left-desc item">
              <p>企業団体向け</p>            
-             <p><span>出会い交流みんなで</span>サポートセンター事務局</p>
+             <p><span>出会い交流みんなで</span><br class="sp-lg"> サポートセンター事務局</p>
             </div> 
               
           <div class="footer__contact-btn">
@@ -21,6 +21,6 @@
        
           </div> 
         </div>
-      
+        <div id="page_top"><a href="#"></a></div>
         </div>
         
