@@ -25,7 +25,7 @@
                   <?php if(have_posts()): ?>                
                
                     <?php while(have_posts()):the_post(); ?>
-                    <?php get_template_part('include/notice'); ?> 
+                    <?php get_template_part('include/news-inside'); ?> 
                 <?php endwhile; ?>           
                   <?php else: ?>
                     <div class="notice__notinfo">
@@ -45,6 +45,8 @@
           </div>
         </div>
         <?php get_template_part('include/footer'); ?>
+        <?php get_template_part('include/join-banner'); ?>
+
   
       </div>
       <?php get_template_part('include/mobile-menu');?>
