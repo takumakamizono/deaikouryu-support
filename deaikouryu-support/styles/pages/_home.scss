@@ -288,6 +288,45 @@ main {
     }
   }
 }
+.news-event {
+  @extend .pt-lg;
+  @extend .pb-md;
+  background-color: #c8e8c7;
+
+  &__inner {
+    position: relative;
+    background: $cWhite;
+    max-width: 1000px;
+    @extend .content-width;
+    min-height: 250px;
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+  &__box {
+    border-bottom: 0.5px solid ghostwhite;
+
+    display: block;
+    margin-bottom: 10px;
+    transition: 0.3s ease;
+    padding: 3px 5px;
+
+    &:hover {
+      & a {
+        color: $main-txt;
+      }
+    }
+    & a {
+      color: $main-txt;
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+    }
 
     & time {
       font-family: new-order, sans-serif;
@@ -320,7 +359,6 @@ main {
     }
   }
   &__des {
-    font-family: "Noto Sans JP", sans-serif;
     display: block;
     font-size: 14px;
     font-weight: 400;
@@ -345,15 +383,12 @@ main {
   }
   &__btn {
     text-align: center;
-    @include mq(lg) {
-      text-align: right;
-    }
+    margin-top: 30px;
     & .btn {
       max-width: 300px;
       width: 100%;
-      border: none;
-      background: $mainColor;
-      color: $cWhite;
+      border: solid 1px $cSubTitle;
+      border-radius: 30px;
       &::after {
         content: "\f054";
         font-family: "Font Awesome 5 free";
@@ -361,6 +396,38 @@ main {
         position: absolute;
         right: 10px;
       }
+    }
+  }
+  & .post-categories {
+    position: absolute;
+    top: -44px;
+    left: 0;
+    background: $cWhite;
+    padding: 10px 30px;
+    border-radius: 10px 10px 0 0;
+    & li {
+      list-style: none;
+      & > a {
+        color: $main-txt;
+        text-decoration: none;
+        font-size: 14px;
+      }
+    }
+  }
+  & .cat {
+    min-width: 64px;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    margin-right: 10px;
+    padding: 2px 8px;
+    border-radius: 2px;
+    flex-basis: 18%;
+    text-align: center;
+    background-color: $cGreen;
+    color: $cWhite;
+    & li {
+      list-style-type: none;
     }
   }
 }
