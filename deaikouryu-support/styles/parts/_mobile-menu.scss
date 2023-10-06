@@ -1,4 +1,5 @@
 @use "../globals" as *;
+@use "../parts/common" as *;
 
 $cMenuClose: $cPink;
 $cMenuOpen: $cPink;
@@ -61,6 +62,9 @@ $cMenuOpen: $cPink;
     padding: 0;
     perspective: 2000px;
     transform-style: preserve-3d;
+    & .event-none {
+      pointer-events: none;
+    }
   }
   &__item {
     position: relative;
@@ -70,7 +74,7 @@ $cMenuOpen: $cPink;
     padding: 0 30px;
     transition: transform 0.3s, opacity 0.2s;
     opacity: 0;
-    border-bottom: 1px dotted $mainColor;
+    border-bottom: 1px dotted $cPink;
     &::after {
       content: "\f0da";
       font-family: "Font Awesome 5 free";
@@ -95,7 +99,8 @@ $cMenuOpen: $cPink;
       padding: 13px 10px;
       color: $main-txt;
       text-decoration: none !important;
-      font-size: 14px;
+      font-size: 16px;
+      font-weight: 500;
     }
   }
 }
