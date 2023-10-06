@@ -191,12 +191,11 @@ main {
     }
 
     & time {
-      font-family: new-order, sans-serif;
       position: relative;
       padding-right: 20px;
-
       font-size: 12px;
       display: inline-block;
+      font-family: "Zen Kaku Gothic Antique", sans-serif;
       @include mq(md) {
         width: 160px;
       }
