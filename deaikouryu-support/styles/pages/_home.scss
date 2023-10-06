@@ -774,9 +774,11 @@ main {
   max-width: 1000px;
   @extend .content-width;
   @extend .pb-lg;
+  &__inner {
+    display: flex;
+    justify-content: center;
+  }
   &__desc {
-    max-width: 750px;
-    margin: 0px auto;
     padding: 20px;
     background: $cWhite;
     outline: 4px solid $cWhite;
@@ -808,9 +810,6 @@ main {
           top: 0.5px;
           left: -21px;
         }
-        & > span {
-          font-weight: 800;
-        }
       }
     }
     &-txt {
@@ -818,7 +817,6 @@ main {
       & p {
         @extend .font-md;
         & > span {
-          @extend .font-sm;
           display: block;
         }
       }
@@ -827,14 +825,18 @@ main {
   &__btn {
     text-align: center;
     & > span {
-      margin-right: 20px;
-      font-size: 14px;
+      @extend .font-md;
+      font-weight: 500;
+      @include mq(md) {
+        margin-right: 20px;
+      }
     }
     & > a {
       background: #e3007f;
       color: $cWhite;
-      font-size: 14px;
+      @extend .font-sm;
       border-radius: 3px;
+      font-weight: 400;
     }
   }
 }
