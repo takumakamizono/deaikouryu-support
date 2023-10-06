@@ -15,8 +15,8 @@ function add_async_defer_script($url) {
     $version = '1.0.0';
     $style_version = filemtime(get_stylesheet_directory() . '/style.css');
     $script_version = filemtime(get_stylesheet_directory() . '/scripts/main.min.js');
-    wp_enqueue_style('css-reset',DIRE.'/styles/vendors/css-reset.css',array(), $version);
-    wp_enqueue_style('fonts-googleapis','https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:wght@400;500;700;800|family=Noto+Sans+JP:wght@300;400;500;700;800;900&display=swap', false);
+    wp_enqueue_style('css-reset',DIRE.'/styles/vendors/css-reset.css',array(), $version);    
+    wp_enqueue_style('fonts-googleapis', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+Antique:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap', array(), null);
     wp_enqueue_style('swiper-bundle.min.css',DIRE.'/styles/vendors/swiper-bundle.min.css',array(), $version);
     wp_enqueue_style('style.css',DIRE.'/style.css',array(), $style_version);
     wp_enqueue_script('fontawesome','https://kit.fontawesome.com/2bf622374b.js', false);
