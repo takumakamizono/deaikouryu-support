@@ -92,7 +92,7 @@ img {
 }
 
 .font-ssm {
-  font-size: clamp(11px, 1vw, 14px);
+  font-size: clamp(12px, 2vw, 14px);
 }
 .font-sm {
   font-size: clamp(13px, 3vw, 16px);
@@ -101,7 +101,7 @@ img {
   font-size: clamp(15px, 3vw, 19px);
 }
 .font-lr {
-  font-size: clamp(16px, 4vw, 23px);
+  font-size: clamp(16px, 4vw, 24px);
 }
 
 .font-lg {
@@ -378,6 +378,13 @@ img {
   @include mq(sm) {
     display: none;
   }
+  @include mq(lg) {
+    display: block;
+  }
+}
+.sp02 {
+  display: none;
+
   @include mq(lg) {
     display: block;
   }
