@@ -22,7 +22,7 @@
   </ul>
   <div class="auxiliary__btn">
     <span>※お申込み・詳細は、コチラから</span>
-    <a class="btn" href="">鹿児島市ホームページへ</a>
+    <a class="btn" href="">鹿児島市HPへ</a>
   </div>
   </div>
                 </div>
