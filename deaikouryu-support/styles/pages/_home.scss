@@ -732,7 +732,7 @@ main {
 
   &__desc {
     @extend .mb-md;
-    @extend .font-sm;
+    @extend .font-md;
     padding: 10px 20px;
     & p {
       &:nth-child(2) {
@@ -748,12 +748,12 @@ main {
     }
   }
   &__pdf {
-    max-width: 750px;
-    margin: 0 auto;
-    display: flex;
+    @extend .flex;
   }
   &__pdf-btn {
-    margin-right: 30px;
+    @include mq(md) {
+      margin-right: 30px;
+    }
     &::before {
       content: "\025cf";
       width: 20px;
@@ -761,8 +761,12 @@ main {
       color: #2e5895;
     }
     & > a {
+      font-family: "Zen Kaku Gothic Antique", sans-serif;
+
       color: #2e5895;
       text-decoration: none;
+      @extend .font-md;
+      font-weight: 500;
     }
   }
 }
