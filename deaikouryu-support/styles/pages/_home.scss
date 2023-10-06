@@ -991,12 +991,10 @@ main {
 
     &-desc {
       & p {
-        font-family: "M PLUS Rounded 1c", sans-serif;
         font-weight: bold;
         @extend .font-lr;
-        & > span {
+        &:nth-child(2) {
           @extend .font-xl;
-          margin-right: 10px;
         }
       }
     }
