@@ -559,9 +559,7 @@ main {
   max-width: 1000px;
   @extend .content-width;
   @extend .mb-md;
-  &__desc {
-    max-width: 750px;
-  }
+
   &__desc-top {
     @extend .mb-md;
     & p {
@@ -569,9 +567,11 @@ main {
       &:nth-of-type(1) {
         @extend .font-md;
         @extend .mb-sm;
+        font-weight: 600;
       }
       &:nth-of-type(2) {
         @extend .font-sm;
+        font-weight: 500;
       }
       @include mq(md) {
         text-align: center;
@@ -590,10 +590,12 @@ main {
     @extend .mb-md;
 
     & h4 {
-      @extend .font-md;
+      @extend .font-lr;
     }
     & p {
       @extend .font-sm;
+      line-height: 1.6;
+      font-weight: 500;
     }
   }
   &__desc-heart {
@@ -611,19 +613,25 @@ main {
     margin: 0 auto;
   }
   &__desc-heart-tit {
-    @extend .font-md;
+    @extend .font-lr;
     font-weight: 800;
     margin-bottom: 10px;
   }
   &__desc-heart-txts {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
     & ul {
       list-style: none;
       padding-left: 7px;
-      font-size: 12px;
+
       line-height: 1.8;
       & li {
+        @extend .font-ssm;
         position: relative;
         list-style: none;
+        font-weight: 500;
         &::before {
           content: "\025ce";
           /* 配置を調整 */
@@ -640,13 +648,15 @@ main {
 
     & h4 {
       position: relative;
-      @extend .font-md;
+      @extend .font-lr;
       & > span {
         margin-right: 5px;
       }
     }
     & p {
       @extend .font-sm;
+      font-weight: 500;
+      line-height: 1.6;
     }
   }
 }
