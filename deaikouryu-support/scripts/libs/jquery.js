@@ -30,14 +30,30 @@ jQuery(function () {
   });
 });
 
-$(window).on("load", function () {
-  var url = $(location).attr("href");
-  if (url.indexOf("#") != -1) {
-    var anchor = url.split("#");
-    var target = $("#" + anchor[anchor.length - 1]);
-    if (target.length) {
-      var pos = Math.floor(target.offset().top) - 200;
-      $("html, body").animate({ scrollTop: pos }, 500);
-    }
+var headerHeight = jQuery("header").outerHeight() + 20;
+
+// ページ内のアンカーへスクロール
+jQuery('a[href*="#"]').click(function () {
+  var target = jQuery(this.hash === "" ? "html" : this.hash);
+  var position = target.offset().top - headerHeight;
+  if (target.length) {
+    jQuery("html, body").animate({ scrollTop: position }, 500, "swing");
+
+    // #タグをURLに残す場合は削除
+    return false;
   }
 });
+
+// ページ外のアンカーへスクロール
+var urlHash = location.hash;
+if (urlHash) {
+  var target = jQuery(urlHash);
+  var position = target.offset().top - headerHeight;
+  // どこからスクロールさせるか ※一番上ならscrollTop(0)
+  jQuery("body,html")
+    .stop()
+    .scrollTop(position - 200);
+  setTimeout(function () {
+    jQuery("body,html").stop().animate({ scrollTop: position }, 500, "swing");
+  }, 100);
+}
