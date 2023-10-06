@@ -8,13 +8,13 @@
             </div> 
               
           <div class="footer__contact-btn">
-         <a href="" class="btn slide-bg">お問い合わせ</a>
+         <a href="<?= home_url('/contact/'); ?>" class="btn slide-bg">お問い合わせ</a>
           </div>
             </div>
             </div>
             <div class="footer__right">
             <div class="footer__img">
-              <a href="https://www.city-kirishima.jp/"target="_blank" rel="noopener">
+              <a href="https://www.city.kagoshima.lg.jp/" target="_blank" rel="noopener">
               <img src="<?= get_template_directory_uri(); ?>/images/logo.png" alt="footerのロゴ画像">
               </a>
             </div>
