@@ -514,8 +514,6 @@ main {
   @extend .content-width;
   @extend .mb-lg;
   &__desc {
-    max-width: 750px;
-    margin: 0px auto;
     padding: 20px;
     background: $cWhite;
     outline: 4px solid $cWhite;
@@ -523,19 +521,24 @@ main {
     border: solid 2px $cPink;
     border-radius: 10px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     & > h3 {
       @extend .font-lr;
-      text-align: center;
+
       @extend .mb-sm;
     }
     & > ul {
       @extend .font-sm;
 
-      padding-left: 10%;
+      padding-left: 10px;
       line-height: 1.8;
+
       & li {
         position: relative;
         list-style: none;
+        font-weight: 500;
         &::before {
           content: "\025ce";
           /* 配置を調整 */
