@@ -884,7 +884,7 @@ main {
 .record {
   @extend .pt-md;
   @extend .pb-lg;
-  background-color: #c8e8c7;
+  background-color: $cLight-Green;
 
   &__inner {
     max-width: 1000px;
@@ -917,9 +917,9 @@ main {
     }
 
     & time {
-      font-family: new-order, sans-serif;
       text-decoration: none;
       font-size: 12px;
+      font-family: "Zen Kaku Gothic Antique", sans-serif;
     }
   }
 
