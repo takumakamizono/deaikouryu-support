@@ -10,7 +10,7 @@
   </div>
   <div class="outline__img">
     <p class="outline__img-tit">独身従業員向け出会いイベント開催イメージ</p>
-    <img src="<?= get_template_directory_uri(); ?>/images/deai-image.png" alt="イベント開催イメージ画像">
+    <img src="<?= get_template_directory_uri(); ?>/images/deai-image.png?v3" alt="イベント開催イメージ画像">
   </div>
 
                 </div>
