@@ -985,10 +985,106 @@ main {
     text-align: center;
     & .btn {
       border: 1px solid $lightGray;
-      border-radius: 3px;
     }
     @include mq(md) {
       text-align: left;
+    }
+  }
+}
+
+.event-info {
+  background-color: $cLight-Green;
+  @extend .pt-md;
+  @extend .pb-lg;
+  &__inner {
+    max-width: 1000px;
+    @extend .content-width;
+    padding: 20px;
+    outline: 4px solid $cWhite;
+    outline-offset: 2px;
+    border: solid 2px $cGreen;
+    border-radius: 10px;
+    box-sizing: border-box;
+    & .section-titles {
+      color: $cGreen;
+    }
+  }
+  &__desc {
+    @extend .flex;
+    justify-content: space-between;
+  }
+  &__desc-right,
+  &__desc-left {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 49%;
+    & > span {
+      font-family: "Zen Kaku Gothic Antique", sans-serif;
+    }
+    & h4 {
+      @extend .font-md;
+    }
+    & .btn {
+      border-radius: 10px;
+      width: 100%;
+      & span {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        color: $cWhite;
+        @extend .font-sm;
+        &:nth-child(2) {
+          @extend .font-md;
+        }
+      }
+    }
+  }
+  &__desc-left {
+    & .btn {
+      background: $cGreen;
+    }
+  }
+  &__desc-right {
+    & .btn {
+      background: $lightGray;
+      pointer-events: none;
+      & > span {
+        min-height: 52px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @extend .font-md;
+      }
+    }
+    & .event-info__pdf-btn {
+      &::before {
+        color: $lightGray;
+      }
+      & > a {
+        color: $lightGray;
+      }
+    }
+  }
+
+  &__pdf-btn {
+    @include mq(md) {
+      margin-right: 30px;
+    }
+
+    &::before {
+      content: "\025cf";
+      width: 20px;
+      height: 20px;
+      color: #2e5895;
+    }
+    & > a {
+      font-family: "Zen Kaku Gothic Antique", sans-serif;
+      color: #2e5895;
+      text-decoration: none;
+      @extend .font-sm;
+      font-weight: 500;
     }
   }
 }
