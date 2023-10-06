@@ -12,9 +12,7 @@
         <div class="works__contents">
                 <time><?php the_time( get_option( 'date_format' ) ); ?></time>  
                     <p class="works__title"><?php the_title(); ?></p>
-                    <!-- <div class="works__desc">
-                      <p><?php //the_excerpt(); ?></p>
-                    </div> -->
+                 
         </div>
 </div>
 
