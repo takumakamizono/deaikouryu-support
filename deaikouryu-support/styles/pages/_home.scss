@@ -666,8 +666,7 @@ main {
   @extend .mb-lg;
   &__inner {
     position: relative;
-    max-width: 750px;
-    margin: 0 auto;
+
     background-image: radial-gradient(
       circle at 10% 20%,
       rgb(245, 255, 204) 0%,
@@ -682,7 +681,7 @@ main {
     &::after {
       position: absolute;
 
-      bottom: 150px;
+      bottom: 180px;
       right: -5px;
       width: 83px;
       height: 83px;
@@ -693,19 +692,26 @@ main {
       vertical-align: middle;
       background-repeat: no-repeat;
       @include mq(ssm) {
-        bottom: 116px;
+        bottom: 135px;
+        right: -15px;
+        width: 110px;
+        height: 110px;
+      }
+      @include mq(sm) {
+        bottom: 120px;
         right: -15px;
         width: 110px;
         height: 110px;
       }
       @include mq(md) {
-        bottom: 106px;
+        bottom: 125px;
         right: -5px;
         width: 120px;
         height: 120px;
       }
       @include mq(lg) {
-        bottom: 110px;
+        right: -20px;
+        bottom: 20px;
         width: 150px;
         height: 150px;
       }
