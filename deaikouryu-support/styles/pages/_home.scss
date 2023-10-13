@@ -158,7 +158,7 @@ main {
   &__inner {
     position: relative;
     background: $cWhite;
-    max-width: 1000px;
+    max-width: $contentMaxWidth;
     @extend .content-width;
     border-radius: 0 20px 20px 20px;
     padding: 20px;
@@ -303,7 +303,7 @@ main {
   &__inner {
     position: relative;
     background: $cWhite;
-    max-width: 1000px;
+    max-width: $contentMaxWidth;
     @extend .content-width;
     min-height: 250px;
     border-radius: 20px;
@@ -425,7 +425,7 @@ main {
 
 .outline {
   @extend .pt-lg;
-  max-width: 1000px;
+  max-width: $contentMaxWidth;
   @extend .content-width;
   @extend .mb-lg;
 
@@ -510,7 +510,7 @@ main {
   }
 }
 .worries {
-  max-width: 1000px;
+  max-width: $contentMaxWidth;
   @extend .content-width;
   @extend .mb-lg;
   &__desc {
@@ -556,7 +556,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1000px;
+  max-width: $contentMaxWidth;
   @extend .content-width;
   @extend .mb-md;
 
@@ -661,7 +661,7 @@ main {
   }
 }
 .benefits {
-  max-width: 1000px;
+  max-width: $contentMaxWidth;
   @extend .content-width;
   @extend .mb-lg;
   &__inner {
@@ -771,7 +771,7 @@ main {
   }
 }
 .auxiliary {
-  max-width: 1000px;
+  max-width: $contentMaxWidth;
   @extend .content-width;
   @extend .pb-lg;
   &__inner {
@@ -887,7 +887,7 @@ main {
   background-color: $cLight-Green;
 
   &__inner {
-    max-width: 1000px;
+    max-width: $contentMaxWidth;
     @extend .content-width;
     background: $cGreen;
     padding: 30px 20px;
@@ -1026,9 +1026,9 @@ main {
 .event-info {
   background-color: $cLight-Green;
   @extend .pt-md;
-  @extend .pb-lg;
+  @extend .pb-md;
   &__inner {
-    max-width: 1000px;
+    max-width: $contentMaxWidth;
     @extend .content-width;
     padding: 20px;
     outline: 4px solid $cWhite;
