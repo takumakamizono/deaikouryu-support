@@ -85,7 +85,7 @@ $cMenuOpen: $cPink;
       transform: translateY(-50%);
     }
     &:hover {
-      background: $mainColor;
+      background: $cPink;
       &::after {
         color: $cWhite;
       }
