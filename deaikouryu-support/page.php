@@ -19,8 +19,8 @@
             <?php if(have_posts()): ?>
             <?php while(have_posts()):the_post(); ?>
             <div class="page-content">
+              <?php get_template_part('include/breadcrumb'); ?> 
               <div class="page-content__inner">
-                  <?php get_template_part('include/breadcrumb'); ?> 
                <?php the_content(); ?>
                 </div>
           </div>
