@@ -7,6 +7,7 @@
   @extend .mb-lg;
   &__inner {
     @extend .content-width;
+    max-width: $contentMaxWidth;
   }
   &__block {
     font-family: "Noto Sans JP", sans-serif;
@@ -452,5 +453,11 @@
         color: $cBgGray;
       }
     }
+  }
+}
+.contact-tel {
+  @extend .pt-md;
+  @include mq(lg) {
+    text-align: right;
   }
 }
