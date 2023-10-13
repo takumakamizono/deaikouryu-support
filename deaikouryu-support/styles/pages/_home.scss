@@ -498,13 +498,12 @@ main {
   &__img {
     & > img {
       margin: 0 auto;
-      width: 800px;
       object-fit: contain;
     }
   }
   &__img-tit {
     text-align: center;
-    @extend .font-md;
+    font-size: clamp(14px, 3vw, 23px);
     @extend .mb-sm;
     font-weight: 500;
   }
