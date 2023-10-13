@@ -657,6 +657,43 @@ main {
       @extend .font-sm;
       font-weight: 500;
       line-height: 1.6;
+      margin-bottom: 10px;
+    }
+  }
+  &__pdf {
+    @extend .flex;
+    margin-bottom: 20px;
+    @extend .font-md;
+  }
+  &__pdf-btn {
+    margin-bottom: 5px;
+    @include mq(md) {
+      margin-right: 30px;
+    }
+    &::before {
+      content: "\025cf";
+      width: 20px;
+      height: 20px;
+    }
+    & > a {
+      font-family: "Zen Kaku Gothic Antique", sans-serif;
+      color: #2e5895;
+
+      font-weight: 500;
+    }
+    & span {
+      font-weight: 500;
+      &:last-child {
+        display: block;
+        @include mq(md) {
+          display: inline;
+        }
+        margin-left: 20px;
+        & > a {
+          color: #2e5895;
+          margin-right: 16px;
+        }
+      }
     }
   }
 }
@@ -747,33 +784,11 @@ main {
       padding: 40px 50px;
     }
   }
-  &__pdf {
-    @extend .flex;
-  }
-  &__pdf-btn {
-    @include mq(md) {
-      margin-right: 30px;
-    }
-    &::before {
-      content: "\025cf";
-      width: 20px;
-      height: 20px;
-      color: #2e5895;
-    }
-    & > a {
-      font-family: "Zen Kaku Gothic Antique", sans-serif;
-
-      color: #2e5895;
-      text-decoration: none;
-      @extend .font-md;
-      font-weight: 500;
-    }
-  }
 }
 .auxiliary {
   max-width: $contentMaxWidth;
   @extend .content-width;
-  @extend .pb-lg;
+  @extend .pb-md;
   &__inner {
     display: flex;
     justify-content: center;
