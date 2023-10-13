@@ -10,12 +10,6 @@
   </div>
 
                 </div>
-                <div class="benefits__pdf">
-                  <div class="benefits__pdf-btn">
-                    <a href="">詳細はコチラ(事業実施要領)PDF</a>
-                  </div>
-                  <div class="benefits__pdf-btn">
-                    <a href="">リーフレット PDF</a>
-                  </div>
-                </div>
+            
+                  
               </section>
