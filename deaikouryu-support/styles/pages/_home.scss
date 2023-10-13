@@ -513,6 +513,7 @@ main {
   @extend .content-width;
   @extend .mb-lg;
   &__desc {
+    color: #757474;
     padding: 20px;
     background: $cWhite;
     outline: 4px solid $cWhite;
@@ -524,12 +525,12 @@ main {
     flex-direction: column;
     align-items: center;
     & > h3 {
-      @extend .font-lr;
+      font-size: clamp(18px, 4vw, 30px);
 
       @extend .mb-sm;
     }
     & > ul {
-      @extend .font-sm;
+      font-size: clamp(14px, 4vw, 24px);
 
       padding-left: 10px;
       line-height: 1.8;
