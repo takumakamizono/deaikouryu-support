@@ -55,13 +55,7 @@ $slug = $page->post_name;
               <div class="hero-sub__titles">
               <h2 class="hero-sub__maintitle ">404 NOT FOUND</h2>
               </div>
-              <div class="hero-sub__img">  
-                <?php if(get_field('404_img',210)): ?>      
-              <img src="<?php the_field('404_img',210);?>" alt="404ページのヘッダー画像">
-              <?php else: ?>
-                <img src="<?= get_template_directory_uri(); ?>/images/subtop-image04.png" alt="noimage画像" />
-               <?php endif; ?>
-            </div>     
+              
         </div>
       </div>
         <?php endif; ?>
