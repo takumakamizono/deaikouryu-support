@@ -4,6 +4,7 @@
   <?php get_header();?>
   </head>
   <body>
+  <?php get_template_part('include/tag-manager'); ?>
     <div id="global-container">
       <div id="container">
         <div class="mobile-menu__cover"></div>
