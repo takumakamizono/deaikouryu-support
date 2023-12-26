@@ -2,8 +2,8 @@ class Main {
   constructor() {
     this.header = document.querySelector(".header");
     this.banner = document.querySelector(".join-banner");
-    this.hero = new HeroSlider(".swiper");
-    this.sides = document.querySelectorAll(".side");
+    // this.hero = new HeroSlider(".swiper");
+    // this.sides = document.querySelectorAll(".side");
     this._observers = [];
     this._init();
   }
@@ -19,39 +19,39 @@ class Main {
 
   _scrollInit() {
     this._observers.push(
-      new ScrollObserver("#main-content", this._sideAnimation.bind(this), {
-        once: false,
-        rootMargin: "-300px 0px",
-      }),
+      // new ScrollObserver("#main-content", this._sideAnimation.bind(this), {
+      //   once: false,
+      //   rootMargin: "-300px 0px",
+      // }),
       new ScrollObserver(".nav-trigger", this._navAnimation.bind(this), {
         once: false,
       }),
       new ScrollObserver(".nav-trigger", this._navBanner.bind(this), {
         once: false,
       }),
-      new ScrollObserver(".swiper", this._toggleSlideAnimation.bind(this), {
-        once: false,
-      }),
-      new ScrollObserver(".cover-slide", this._inviewAnimation),
-      new ScrollObserver(".appear", this._inviewAnimation),
-      new ScrollObserver(".tween-animate-title", this._textAnimation)
+      // new ScrollObserver(".swiper", this._toggleSlideAnimation.bind(this), {
+      //   once: false,
+      // }),
+      // new ScrollObserver(".cover-slide", this._inviewAnimation),
+      new ScrollObserver(".appear", this._inviewAnimation)
+      // new ScrollObserver(".tween-animate-title", this._textAnimation)
     );
   }
 
-  _toggleSlideAnimation(el, inview) {
-    if (inview) {
-      this.hero.start();
-    } else {
-      this.hero.stop();
-    }
-  }
+  // _toggleSlideAnimation(el, inview) {
+  //   if (inview) {
+  //     this.hero.start();
+  //   } else {
+  //     this.hero.stop();
+  //   }
+  // }
 
-  _textAnimation(el, inview) {
-    if (inview) {
-      const ta = new TweenTextAnimation(el);
-      ta.animate();
-    }
-  }
+  // _textAnimation(el, inview) {
+  //   if (inview) {
+  //     const ta = new TweenTextAnimation(el);
+  //     ta.animate();
+  //   }
+  // }
 
   _navAnimation(el, inview) {
     if (inview) {
@@ -68,13 +68,13 @@ class Main {
     }
   }
 
-  _sideAnimation(el, inview) {
-    if (inview) {
-      this.sides.forEach((side) => side.classList.add("inview"));
-    } else {
-      this.sides.forEach((side) => side.classList.remove("inview"));
-    }
-  }
+  // _sideAnimation(el, inview) {
+  //   if (inview) {
+  //     this.sides.forEach((side) => side.classList.add("inview"));
+  //   } else {
+  //     this.sides.forEach((side) => side.classList.remove("inview"));
+  //   }
+  // }
 
   _inviewAnimation(el, inview) {
     if (inview) {

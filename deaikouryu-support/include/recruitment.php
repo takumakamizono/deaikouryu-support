@@ -1,3 +1,17 @@
+<?php 
+$page_id = 106;
+$pdf01 = get_field('pdf01',$page_id);
+$pdf02 = get_field('pdf02',$page_id);
+$pdf03 = get_field('pdf03',$page_id);
+$pdf04 = get_field('pdf04',$page_id);
+$pdf05 = get_field('pdf05',$page_id);
+$pdf06 = get_field('pdf06',$page_id);
+$word01 = get_field('word01',$page_id);
+$word02 = get_field('word02',$page_id);
+$word03 = get_field('word03',$page_id);
+$registration_pdf = get_field('registration-list-pdf',$page_id);
+       
+?>
 <section class="recruitment">             
 <div class="recruitment__desc">
   <div class="recruitment__desc-top">
@@ -35,6 +49,7 @@
   </ul>
   </div>
 </div>
+</div>
 <div class="recruitment__desc-entry">
     <h4><span>&#9312;</span> 登録資格</h4>
      <p>市内に事務所又は事業所等がある企業・団体で、本事業の趣旨に賛同し、自社の独身従業員の出会いの応援や、出会いの場の提供が可能であること。（結婚相談、お見合い、出会い及び結婚の斡旋等を業とする企業等は除きます）</p>
@@ -44,18 +59,21 @@
      <p>実施要領をご覧いただき下の応募フォーム（「サポート団体に登録」ボタン）よりご登録ください。（所定の様式による登録も受け付けております。お問い合わせフォームからご連絡ください。）</p>
      <div class="recruitment__pdf">
                   <div class="recruitment__pdf-btn">
-                    <a href="https://kagoshimacity-deaikouryu-support.com/wp-content/uploads/2023/10/2bc4abbdbe83849a736a3a240e833a17.pdf"target="_blank" rel="noopener">事業実施要領（PDF）</a>
+                    <a href="<?= $pdf01['url'] ?>"target="_blank" rel="noopener">事業実施要領（PDF）</a>
                   </div>
                   <div class="recruitment__pdf-btn">
-                    <a href="https://kagoshimacity-deaikouryu-support.com/wp-content/uploads/2023/10/ffa6ea6e957242ae460b6ff57e29f497.pdf" target="_blank" rel="noopener">事業案内リーフレット（PDF）</a>
+                    <a href="<?= $pdf02['url'] ?>" target="_blank" rel="noopener">事業案内リーフレット（PDF）</a>
+                  </div>
+                  <div class="recruitment__pdf-btn">
+                    <a href="<?= $pdf06['url'] ?>" target="_blank" rel="noopener">「補足資料：出会イベントの開催について」（PDF）</a>
                   </div>
                 </div>
                 <div class="recruitment__pdf">
                   <div class="recruitment__pdf-btn">
                   <span>出会いイベント実施計画書（従業員サポート団体⽤）</span>     
                    <span>
-                    <a href="https://kagoshimacity-deaikouryu-support.com/wp-content/uploads/2023/10/90c33ec9802d8753bbef942ebeecf61e.pdf" target="_blank" rel="noopener">PDF</a>
-                    <a href="https://kagoshimacity-deaikouryu-support.com/wp-content/uploads/2023/10/90c33ec9802d8753bbef942ebeecf61e.doc" target="_blank" rel="noopener">Word</a>
+                    <a href="<?= $pdf03['url'] ?>" target="_blank" rel="noopener">PDF</a>
+                    <a href="<?= $word01['url'] ?>" target="_blank" rel="noopener">Word</a>
                     </span>
 
 
@@ -64,8 +82,8 @@
                     <span>出会いイベント実施計画書（出会いサポート団体⽤）</span>
                   
                     <span>
-                    <a href="https://kagoshimacity-deaikouryu-support.com/wp-content/uploads/2023/10/1f28b8fd6fdf7566de9320d3ec603912.pdf" target="_blank" rel="noopener">PDF</a>
-                    <a href="https://kagoshimacity-deaikouryu-support.com/wp-content/uploads/2023/10/1f28b8fd6fdf7566de9320d3ec603912.doc" target="_blank" rel="noopener">Word</a>
+                    <a href="<?= $pdf04['url'] ?>" target="_blank" rel="noopener">PDF</a>
+                    <a href="<?= $word02['url'] ?>" target="_blank" rel="noopener">Word</a>
                     </span>
 
                   </div>
@@ -73,14 +91,19 @@
                     <span>出会いイベント実施報告書（共通）</span>
                    
                     <span>
-                    <a href="https://kagoshimacity-deaikouryu-support.com/wp-content/uploads/2023/10/4dc5e6390b03b590856dafa0befaac3e.pdf" target="_blank" rel="noopener">PDF</a>
-                    <a href="https://kagoshimacity-deaikouryu-support.com/wp-content/uploads/2023/10/4dc5e6390b03b590856dafa0befaac3e.doc" target="_blank" rel="noopener">Word</a>
+                    <a href="<?= $pdf05['url'] ?>" target="_blank" rel="noopener">PDF</a>
+                    <a href="<?= $word03['url'] ?>" target="_blank" rel="noopener">Word</a>
                     </span>
 
                   </div>
                   </div>
   </div>
-  </div>
- 
+
+  
+    <div class="registration-list-btn">
+      <a class="btn" href="<?= $registration_pdf['url'] ?>" target="_blank" rel="noopener">登録企業・団体一覧</a>
+    </div>
+  
+
                 </div>
               </section>

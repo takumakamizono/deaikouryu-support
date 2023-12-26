@@ -1078,11 +1078,15 @@ main {
       border-radius: 10px;
       width: 100%;
       & span {
+        min-height: 52px;
         display: inline-block;
         width: 100%;
         text-align: center;
         color: $cWhite;
         @extend .font-sm;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         &:nth-child(2) {
           @extend .font-md;
         }
@@ -1099,7 +1103,6 @@ main {
       background: $lightGray;
       pointer-events: none;
       & > span {
-        min-height: 52px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1133,6 +1136,21 @@ main {
       text-decoration: none;
       @extend .font-sm;
       font-weight: 500;
+    }
+  }
+}
+
+.registration-list-btn {
+  text-align: center;
+  @extend .mb-sm;
+  & .btn {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px 40px;
+    @extend .font-lr;
+    &:hover {
+      background: $cPink;
+      color: $cWhite;
     }
   }
 }
