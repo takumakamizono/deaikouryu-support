@@ -1,6 +1,4 @@
 <section class="news-event" >
- 
-
                 <div  class="news-event__inner">
                 <h3 class="section-titles">出会い応援団体の主催イベント</h3>
                

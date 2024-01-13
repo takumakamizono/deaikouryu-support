@@ -13,7 +13,7 @@
     font-family: "Noto Sans JP", sans-serif;
     @extend .mb-md;
     & h3 {
-      border-bottom: 1px solid $mainColor;
+      border-bottom: 1px solid $main-txt;
       @extend .mb-sm;
       color: $mainColor;
       font-weight: 400;

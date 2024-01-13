@@ -1,7 +1,7 @@
 <section class="news" >
 
                 <div  class="news__inner">
-                
+                <div  class="news__content">
                 <?php
                      $args=[
                        'post_type'=> 'post',
@@ -35,6 +35,7 @@
                     </div>
            <?php endif; ?>
              <?php wp_reset_postdata(); ?>                
+                </div>
                 </div>
             
               </section>

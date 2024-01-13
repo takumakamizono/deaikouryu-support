@@ -17,7 +17,7 @@
           <div id="main-content">
            
             <main>
-               <section class="notice">
+               <section  <?php post_class('notice') ?>>
                 <?php get_template_part('include/breadcrumb'); ?> 
                    
 
@@ -26,7 +26,9 @@
                   <?php if(have_posts()): ?>                
                
                     <?php while(have_posts()):the_post(); ?>
+                    <ul class="notice__content"> 
                     <?php get_template_part('include/news-inside'); ?> 
+                    </ul>
                 <?php endwhile; ?>           
                   <?php else: ?>
                     <div class="notice__notinfo">

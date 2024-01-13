@@ -151,11 +151,13 @@ main {
 }
 
 .news {
-  @extend .pt-lg;
-  @extend .pb-lg;
-  background-color: #d7eeff;
+  background-color: $cLight-Blue;
 
   &__inner {
+    @extend .pt-lg;
+    @extend .pb-lg;
+  }
+  &__content {
     position: relative;
     background: $cWhite;
     max-width: $contentMaxWidth;
@@ -296,7 +298,7 @@ main {
 }
 
 .news-event {
-  @extend .pt-lg;
+  @extend .pt-md;
   @extend .pb-md;
   background-color: $cLight-Green;
 
@@ -307,7 +309,7 @@ main {
     @extend .content-width;
     min-height: 250px;
     border-radius: 20px;
-    padding: 20px;
+    padding: 20px 5px;
   }
 
   &__list {
@@ -608,9 +610,13 @@ main {
     @extend .mb-md;
   }
   &__desc-heart-img {
+    width: 50%;
     max-width: 300px;
     @extend .mb-sm;
     margin: 0 auto;
+    @include mq(md) {
+      width: 80%;
+    }
   }
   &__desc-heart-tit {
     @extend .font-lr;
@@ -907,8 +913,11 @@ main {
     max-width: $contentMaxWidth;
     @extend .content-width;
     background: $cGreen;
-    padding: 30px 20px;
+    padding: 30px 5px;
     border-radius: 20px;
+    @include mq(md) {
+      padding: 30px 20px;
+    }
     & .section-titles {
       color: $cWhite;
     }
@@ -919,13 +928,15 @@ main {
   }
 
   &__title {
-    @extend .mb-sm;
-    @extend .font-sm;
+    margin-bottom: 5px;
+    @extend .font-md;
+    font-weight: 600;
   }
 
   &__item {
-    @extend .mb-md;
-
+    margin-bottom: 15px;
+    background: $cWhite;
+    border-radius: 5px;
     @include mq(md) {
       flex-basis: 49%;
     }
@@ -937,6 +948,15 @@ main {
       text-decoration: none;
       font-size: 12px;
       font-family: "Zen Kaku Gothic Antique", sans-serif;
+    }
+    & > a {
+      text-decoration: none;
+      color: $main-txt;
+      display: flex;
+      flex-direction: row;
+      @include mq(md) {
+        flex-direction: column;
+      }
     }
   }
 
@@ -959,21 +979,38 @@ main {
   }
   &__img {
     width: 100%;
-    height: 180px;
+    height: 100%;
+    flex-basis: 30%;
     @include mq(md) {
-      height: 230px;
+      height: 150px;
+      flex-basis: auto;
     }
     & > img {
+      border-radius: 5px 5px 0 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
   &__contents {
+    flex-basis: 70%;
+
     padding: 10px 5px;
+    @include mq(md) {
+      padding: 10px 15px;
+    }
+
+    &-inner {
+      padding: 10px 0;
+    }
   }
+
   &__desc {
     font-size: 13px;
+    display: none;
+    @include mq(md) {
+      display: block;
+    }
   }
   &__notInfo {
     width: 100%;
@@ -1095,13 +1132,14 @@ main {
   }
   &__desc-left {
     & .btn {
-      background: $cGreen;
+      background: $lightGray;
+      pointer-events: none;
     }
   }
   &__desc-right {
     & .btn {
-      background: $lightGray;
-      pointer-events: none;
+      background: $cGreen;
+
       & > span {
         display: flex;
         justify-content: center;
@@ -1109,14 +1147,14 @@ main {
         @extend .font-md;
       }
     }
-    & .event-info__pdf-btn {
-      &::before {
-        color: $lightGray;
-      }
-      & > a {
-        color: $lightGray;
-      }
-    }
+    // & .event-info__pdf-btn {
+    //   &::before {
+    //     color: $lightGray;
+    //   }
+    //   & > a {
+    //     color: $lightGray;
+    //   }
+    // }
   }
 
   &__pdf-btn {

@@ -101,7 +101,7 @@ function redirect_thanks_page() {
 }
 
 function twpp_change_excerpt_length( $length ) {
-  return 150; 
+  return 30; 
 }
 add_filter( 'excerpt_length', 'twpp_change_excerpt_length', 999 );
 
@@ -117,3 +117,51 @@ add_filter('use_block_editor_for_post',function($use_block_editor,$post){
   }
   return $use_block_editor;
 },10,2);
+
+
+
+function custom_category_paging_links() {
+  $cat = get_the_category();
+  if ($cat) {
+      $cat_id = $cat[0]->cat_ID;
+      $cat_name = $cat[0]->cat_name;
+      $link = get_category_link($cat_id);
+
+      $cat_posts = get_posts(array(
+          'cat' => $cat_id,
+          'posts_per_page' => -1,
+          'order' => 'ASC',
+          'orderby' => 'date'
+      ));
+      
+      $current_post_index = 0;
+      $current_post_id = get_the_ID();
+      
+      // Find the index of the current post in the sorted category posts
+      foreach ($cat_posts as $index => $post) {
+          if ($post->ID == $current_post_id) {
+              $current_post_index = $index;
+              break;
+          }
+      }
+      
+      
+      
+      // Define $prev_post and $next_post based on conditions
+      $prev_post = ($current_post_index > 0) ? $cat_posts[$current_post_index - 1] : null;
+      $next_post = ($current_post_index < count($cat_posts) - 1) ? $cat_posts[$current_post_index + 1] : null;
+      
+      if ($prev_post) {
+          echo '<li class="postLinks__link postLinks__link-prev"><a href="' . get_permalink($prev_post->ID) . '">前へ</a></li>';
+      }
+      // Output the "Back to Category" button
+      echo '<li class="postLinks__link single__list-btn centered">';
+      echo '<a class="btn slide-bg" href="' . esc_url($link) . '">' . esc_html($cat_name) . 'の一覧へ戻る</a>';
+      echo '</li>';
+      
+      if ($next_post) {
+          echo '<li class="postLinks__link postLinks__link-next"><a href="' . get_permalink($next_post->ID) . '">次へ</a></li>';
+      }
+  }
+}
+

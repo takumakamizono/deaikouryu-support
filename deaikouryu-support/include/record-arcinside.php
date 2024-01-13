@@ -10,6 +10,9 @@
                     </div>
             
             <div class="record-arc__contents">
+            <ul class="cat">
+                       <?php categories_label(); ?>
+                       </ul>
 <time><?php the_time( get_option( 'date_format' ) ); ?></time>  
 
                     <p class="record-arc__title"><?php the_title(); ?></p>

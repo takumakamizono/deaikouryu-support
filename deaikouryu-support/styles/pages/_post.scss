@@ -3,10 +3,16 @@
 @use "../parts/button" as *;
 
 .notice {
-  @extend .content-width;
-  @extend .mb-lg;
+  @extend .pb-lr;
   &__inner {
+    max-width: $contentMaxWidth;
+    @extend .content-width;
     min-height: 300px;
+    background: $cWhite;
+    padding: 30px 10px;
+  }
+  &__content {
+    padding: 0;
   }
   &__notinfo {
     text-align: center;
@@ -23,9 +29,16 @@
   &__inner {
     @extend .content-width;
     max-width: 1000px;
-    @extend .pb-lg;
+    @extend .pb-lr;
   }
   &__content {
+    background: #fcfdff;
+
+    padding: 12px;
+    border-radius: 3px;
+    @include mq(lg) {
+      padding: 30px;
+    }
     &-header {
       & > time {
         color: $lightGray;
@@ -58,13 +71,6 @@
       }
     }
     &-text {
-      background: #fcfdff;
-      border: 0.5px solid $cBlue;
-      padding: 12px;
-      border-radius: 3px;
-      @include mq(lg) {
-        padding: 30px;
-      }
       & p {
         @extend .font-sm;
         margin-bottom: 10px;
@@ -84,18 +90,23 @@
 }
 
 .record-arc {
-  @extend .content-width;
-  @extend .mb-lg;
-
+  background: $cLight-Green;
+  @extend .pb-lr;
+  &__inner {
+    max-width: $contentMaxWidth;
+    @extend .content-width;
+  }
   &__list {
     list-style: none;
     padding: 0;
   }
   &__item {
-    @extend .mb-md;
+    @extend .mb-sm;
+    background: $cWhite;
+    border-radius: 10px;
   }
   &__item-link {
-    @extend .flex;
+    display: flex;
     justify-content: space-between;
     text-decoration: none;
     color: $main-txt;
@@ -116,13 +127,24 @@
     margin-bottom: 10px;
   }
   &__img {
-    flex-basis: 29%;
+    flex-basis: 30%;
+    height: 100px;
+    @include mq(md) {
+      height: 200px;
+    }
     & > img {
       height: 100%;
+      border-radius: 10px 0 0 10px;
       object-fit: cover;
     }
   }
   &__contents {
-    flex-basis: 69%;
+    flex-basis: 70%;
+  }
+  &__desc {
+    display: none;
+    @include mq(md) {
+      display: block;
+    }
   }
 }

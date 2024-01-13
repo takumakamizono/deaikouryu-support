@@ -3,8 +3,8 @@
                 <?php
                      $args=[
                        'post_type'=> 'post',
-                       'posts_per_page' => 3,
                        'cat' => [6],
+                       'posts_per_page' => 3,
                        
                      ];
                      $the_query = new WP_Query($args);
@@ -33,6 +33,6 @@
                       ?>
                     <a href="<?= esc_url($news_link); ?>"  class="btn slide-bg item">詳しくはコチラ</a>
                   </div>
-                  </div>
+                  </div> 
                 </div>
               </section>   

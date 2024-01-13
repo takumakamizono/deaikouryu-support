@@ -17,12 +17,12 @@
           <div id="main-content">
            
             <main>
-            <section class="single">
+            <section <?php post_class('single') ?>>
+              <?php get_template_part('include/breadcrumb'); ?> 
               <div class="single__inner">
-                  <?php get_template_part('include/breadcrumb'); ?> 
                 <?php if(have_posts()): ?>
                   <?php while(have_posts()):the_post(); ?> 
-                  <article id="post-<?php the_ID(); ?>" <?php post_class('single__content') ?> >
+                  <article id="post-<?php the_ID(); ?>" class='single__content';>
                     <div class="single__content-header">
                     <time><?php the_time( get_option( 'date_format' ) ); ?></time>  
                     
@@ -33,24 +33,18 @@
                       <?php the_content(); ?>
                        </div>
                     </div>
-                    <div class="postLinks">
-                      <div class="postLinks__link postLinks__link-prev"><?php previous_post_link('戻る%link','%title',true,'') ?></div>
-                      <div class="postLinks__link postLinks__link-next"><?php next_post_link('次へ%link','%title',true,'') ?></div>
-                    </div>
+                
                   </article >
                   <?php endwhile; ?>   
                 <?php endif; ?> 
-                <?php 
-$cat = get_the_category(); 
-$cat_id = $cat[0]->cat_ID; 
-$cat_name =$cat[0]->cat_name;
-$link = get_category_link($cat_id);
-?>
-<div class="single__list-btn">
-<a class="btn slide-bg" href="<?= esc_url($link); ?>"><?= esc_html($cat_name); ?>の一覧へ戻る</a> 
-</div>
+             
+             
               
               </div>
+              <ul class="postLinks">
+    
+    <?php custom_category_paging_links(); ?>
+</ul>
               </section>     
             </main>
           

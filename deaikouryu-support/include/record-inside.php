@@ -8,13 +8,19 @@
                       <img src="<?= get_template_directory_uri(); ?>/images/company.png" alt="noimage画像"> 
                       <?php endif; ?>
                     </div>
-            </a>
+            
             <div class="record__contents">
+            <ul class="cat">
+                       <?php categories_label(); ?>
+                       </ul>
 <time><?php the_time( get_option( 'date_format' ) ); ?></time>  
 
+<div class="record__contents-inner">
                     <p class="record__title"><?php the_title(); ?></p>
-                    <!-- <div class="record__desc">
+                     <div class="record__desc">
                       <p><?php the_excerpt(); ?></p>
-                    </div> -->
                     </div>
+                    </div>
+                    </div>
+                    </a>
                   </div>
